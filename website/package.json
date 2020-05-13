@@ -35,7 +35,7 @@
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
     "webpack-node-externals": "^1.7.2",
-    "install-jar-dependency": ""
+    "install-jar-dependency": "0.0.7"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",

@@ -52,10 +52,10 @@ allprojects {
          */
     }
     repositories {
-        maven(url = "https://packagecloud.io/sarahBuisson/sarahbuisson/maven2")
+        maven(url = "https://packagecloud.io/sarahBuisson/snapshot/maven2")
         google()
         jcenter()
-        mavenLocal()
+        mavenCentral()
         flatDir { dirs("libs") }
     }
 
