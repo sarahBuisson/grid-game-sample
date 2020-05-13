@@ -56,14 +56,13 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        flatDir { dirs("libs") }
     }
 
 }
 
 subprojects { 
 
-	if(name!="website"){
+	if(name=="gameRules"){
     		val scriptsDirectory = "https://raw.githubusercontent.com/sarahBuisson/kotlin-multiplatform-multiproject-sample/master/gradle/scripts/";
     	apply(from = "${scriptsDirectory}/kotlinMultiNpm.gradle.kts")
     	apply(from = "${scriptsDirectory}/github.gradle.kts")
