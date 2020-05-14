@@ -62,14 +62,13 @@
     "kotlin-logging": "io.github.microutils:kotlin-logging-js:1.7.9",
     "kotlin-stdlib": "org.jetbrains.kotlin:kotlin-stdlib-js:1.3.70",
     "kotlin-stdlib-js": "org.jetbrains.kotlin:kotlin-stdlib-js:1.3.70",
-    "kotlinx-serialization-kotlinx-serialization-runtime": "org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.20.0"
+    "kotlinx-serialization-kotlinx-serialization-runtime": "org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.20.0",
+    "easy-rules-core": "org.jeasy:easy-rules-core-npm:3.2.4-SNAPSHOT",
+    "easy-rules-api": "org.jeasy:easy-rules-api-npm:3.2.4-SNAPSHOT"
+
   },
   "jarDependencies": {
-    "game": "../gameRules/build/libs/gameRules-js-0.0.5-SNAPSHOT.jar",
-    "easy-rules-core": "../libs/easy-rules-core-npm-3.2.4-SNAPSHOT.jar",
-    "easy-rules-api": "../libs/easy-rules-api-npm-3.2.4-SNAPSHOT.jar",
-    "easy-rules-kotlin-easy-rules-core": "../libs/easy-rules-core-npm-3.2.4-SNAPSHOT.jar",
-    "easy-rules-kotlin-easy-rules-api": "../libs/easy-rules-api-npm-3.2.4-SNAPSHOT.jar"
+    "game": "../gameRules/build/libs/gameRules-js-0.0.5-SNAPSHOT.jar"
   },
   "mavenRepositories": [
     "https://kotlin.bintray.com/kotlinx/",
