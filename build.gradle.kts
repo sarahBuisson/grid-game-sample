@@ -11,7 +11,7 @@ buildscript {
     extra.set("kotlin_logging_version", "1.7.9")
     extra.set("coroutines_version", "0.23.3")
     extra.set("koltinxSerializationVersion", "0.20.0")
-    extra.set("rules_version", "3.2.4-SNAPSHOT")
+    extra.set("rules_version", "3.2.4-snapshot")
     extra.set("mockkVersion", "1.9")
     /*
 

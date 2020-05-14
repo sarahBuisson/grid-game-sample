@@ -68,8 +68,8 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains.kotlin:kotlin-stdlib-js")
                 implementation("io.github.microutils:kotlin-logging-js:" + extt.get("kotlin_logging_version"))
-                implementation("org.jeasy:easy-rules-api-js:" + extt.get("rules_version"))
-                implementation("org.jeasy:easy-rules-core-js:" + extt.get("rules_version"))
+                implementation("org.jeasy:easy-rules-api-npm:" + extt.get("rules_version"))
+                implementation("org.jeasy:easy-rules-core-npm:" + extt.get("rules_version"))
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:" + extt.get("koltinxSerializationVersion"))
                 //implementation("org.jetbrains.kotlin:kotlin-test-js"
                 //  implementation("io.mockk:mockk:1.7.17"
