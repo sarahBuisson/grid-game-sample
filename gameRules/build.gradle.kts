@@ -54,6 +54,7 @@ kotlin {
 
             }
         }
+
         jvm().compilations["test"].defaultSourceSet {//TODO : commonTest instead of jvmtest, wwhen mockk.js will be better at it
             kotlin.srcDir("src/test/kotlin")
             dependencies {
@@ -77,13 +78,10 @@ kotlin {
         }
 
         js().compilations["test"].defaultSourceSet {
-            {
-                dependencies {
-                    implementation("org.jetbrains.kotlin:kotlin-stdlib-js")
-                    implementation("io.github.microutils:kotlin-logging-js:" + ext.get("kotlin_logging_version"))
-                    implementation("org.jetbrains.kotlin:kotlin-test-js")
-                    //  implementation("io.mockk:mockk:1.7.17"
-                }
+
+            dependencies {
+                implementation("org.jetbrains.kotlin:kotlin-stdlib-js")
+                implementation("io.github.microutils:kotlin-logging-js:" + extt.get("kotlin_logging_version"))
             }
         }
         metadata().compilations["main"].defaultSourceSet {
@@ -91,20 +89,18 @@ kotlin {
                 implementation("org.jeasy:easy-rules-core:" + extt.get("rules_version"))
             }
         }
-        jvm("jvm") {
+    }
 
-            mavenPublication {
-                artifactId = project.name + "-jvm"
-            }
+    jvm("jvm") {
+
+        mavenPublication {
+            artifactId = project.name + "-jvm"
         }
+    }
 
-
-
-        js() {
-            mavenPublication {
-                artifactId = project.name + "-js"
-            }
+    js() {
+        mavenPublication {
+            artifactId = project.name + "-js"
         }
-
     }
 }
