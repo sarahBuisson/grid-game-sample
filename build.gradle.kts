@@ -31,6 +31,8 @@ allprojects {
             rules_version ="3.2.4-SNAPSHOT"
             mockkVersion = "1.9"
          */
+
+
     }
     repositories {
         maven(url = "https://packagecloud.io/sarahBuisson/snapshot/maven2")
@@ -41,11 +43,9 @@ allprojects {
         jcenter()
         mavenCentral()
     }
-
 }
 
 subprojects {
-
     if (name == "gameRules") {
         val scriptsDirectory = "https://raw.githubusercontent.com/sarahBuisson/kotlin-multiplatform-multiproject-sample/master/gradle/scripts/";
         apply(from = "${scriptsDirectory}/kotlinMultiNpm.gradle.kts")
