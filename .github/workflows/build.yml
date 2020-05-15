@@ -11,7 +11,9 @@ jobs:
         with:
           java-version: 8
       - name: Build
-        run: gradle build packJsNpmToMaven
+        run: |
+          gradle build packJsNpmToMaven
+          npm run build --prefix website
       - name: extract build version
         run: |
           gradle generatePomFileForKotlinMultiplatformPublication
