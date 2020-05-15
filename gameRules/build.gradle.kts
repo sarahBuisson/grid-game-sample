@@ -85,11 +85,10 @@ kotlin {
                     //  implementation("io.mockk:mockk:1.7.17"
                 }
             }
-
-            metadata().compilations["main"].defaultSourceSet {
-                dependencies {
-                    implementation("org.jeasy:easy-rules-core:" + extt.get("rules_version"))
-                }
+        }
+        metadata().compilations["main"].defaultSourceSet {
+            dependencies {
+                implementation("org.jeasy:easy-rules-core:" + extt.get("rules_version"))
             }
         }
         jvm("jvm") {
