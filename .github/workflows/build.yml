@@ -10,13 +10,14 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 8
-      - name: Use Node.js 12.x
+      - name: Use Node.js 13.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 13.x
       - name: Build
         run: |
           gradle build packJsNpmToMaven
+          npm install
           npm run build --prefix website
       - name: extract build version
         run: |
