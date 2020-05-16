@@ -70,7 +70,7 @@
 
   },
   "jarDependencies": {
-    "game": "../gameRules/build/libs/gameRules-js-0.0.5-SNAPSHOT.jar"
+    "game": "../gameRules/build/libs/gameRules-npm-0.0.5-SNAPSHOT.jar"
   },
   "mavenRepositories": [
     "https://kotlin.bintray.com/kotlinx/",
