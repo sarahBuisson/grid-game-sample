@@ -16,7 +16,7 @@ jobs:
           node-version: 13.x
       - name: Build back
         run: |
-          gradle build packJsNpmToMaven
+          gradle build packJsNpmToMaven --stacktrace
       - name: Build back lib for front
         run: |
           gradle packJsNpmToMaven
