@@ -70,7 +70,8 @@ class SudokuGridGenerateTest {
     println(resolved)
     }
 
-    @Test(timeout = 20000)
+    @Ignore
+    @Test(timeout = 30000)
     fun shouldGenerateAndCleanFull33Difficulty15() {
 
         var grid = generateFullSudoku(SudokuGrid(3, 3, initPossibleValues(3 * 3)))
@@ -84,6 +85,7 @@ class SudokuGridGenerateTest {
         println("resolvedGrid")
         println(resolved)
     }
+
     @Ignore//take too long
     @Test(timeout = 20000)
     fun shouldGenerateAndCleanFull33Difficulty9() {
