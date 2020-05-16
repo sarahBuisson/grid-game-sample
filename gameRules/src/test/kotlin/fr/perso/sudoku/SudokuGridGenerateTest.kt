@@ -28,7 +28,7 @@ class SudokuGridGenerateTest {
         assertTrue(ResolveSudokuGrid<Int>().isGridPossibleValid(grid))
     }
 
-    @Test
+    @Test(timeout = 20000)
     fun shouldGenerateAndCleanFull33DifficultyVarious() {
 
         var grid = generateFullSudoku(SudokuGrid(3, 3, initPossibleValues(3 * 3)))
@@ -70,8 +70,7 @@ class SudokuGridGenerateTest {
     println(resolved)
     }
 
-@Ignore// sometime fail
-    @Test
+    @Test(timeout = 20000)
     fun shouldGenerateAndCleanFull33Difficulty15() {
 
         var grid = generateFullSudoku(SudokuGrid(3, 3, initPossibleValues(3 * 3)))
@@ -85,8 +84,8 @@ class SudokuGridGenerateTest {
         println("resolvedGrid")
         println(resolved)
     }
-@Ignore//Take too long
-    @Test
+    @Ignore//take too long
+    @Test(timeout = 20000)
     fun shouldGenerateAndCleanFull33Difficulty9() {
 
         var grid = generateFullSudoku(SudokuGrid(3, 3, initPossibleValues(3 * 3)))
