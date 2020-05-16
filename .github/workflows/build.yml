@@ -17,13 +17,14 @@ jobs:
       - name: Build back
         run: |
           gradle build packJsNpmToMaven
-
       - name: Build back lib for front
         run: |
           gradle packJsNpmToMaven
-      - name: Build front
+      - name: Build front load dep
         run: |
           npm install --prefix website
+      - name: Build front
+        run: |
           npm run build --prefix website
       - name: extract build version
         run: |
