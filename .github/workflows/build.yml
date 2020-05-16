@@ -22,7 +22,7 @@ jobs:
         run: |
           gradle packJsNpmToMaven
       - name: Build front
-                run: |
+        run: |
           npm install --prefix website
           npm run build --prefix website
       - name: extract build version
