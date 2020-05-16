@@ -75,8 +75,8 @@
   "mavenRepositories": [
     "https://kotlin.bintray.com/kotlinx/",
     "https://dl.bintray.com/kotlin/kotlinx/",
-    "https://packagecloud.io/sarahBuisson/snapshot",
-    "https://packagecloud.io/sarahBuisson/sarahbuisson"
+    "https://packagecloud.io/sarahBuisson/snapshot/maven2",
+    "https://packagecloud.io/sarahBuisson/sarahbuisson/maven2"
   ],
   "description": ""
 }
