@@ -14,9 +14,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 13.x
-      - name: Build
+      - name: Build back
         run: |
           gradle build packJsNpmToMaven
+
+      - name: Build back lib for front
+        run: |
+          gradle packJsNpmToMaven
+      - name: Build front
+                run: |
           npm install --prefix website
           npm run build --prefix website
       - name: extract build version
