@@ -23,8 +23,8 @@ class App extends Component {
                         <li>
 
                             <Link to="/">Home</Link></li>
-                        <li><Link to="/sudoku">sudoku</Link></li>
-                        <li><Link to="/skyscraper">skyscraper</Link></li>
+                        <li><Link to="./sudoku">sudoku</Link></li>
+                        <li><Link to="./skyscraper">skyscraper</Link></li>
                     </ul>
                     <Switch>
                         <Route exact path="/"
