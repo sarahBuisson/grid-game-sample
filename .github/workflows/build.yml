@@ -25,6 +25,7 @@ jobs:
           npm install --prefix website
       - name: Build front
         run: |
+          cat website/node_modules/game/package.json
           npm run build --prefix website
       - name: extract build version
         run: |
