@@ -12,6 +12,7 @@ kotlin {
         commonMain {
             kotlin.srcDir("src/main/kotlin")
             resources.srcDir("src/main/resource")
+            //kotlin.srcDir("src/test/kotlin")//this line will be put in jvm config in order to only have the test running on the jvm
             dependencies {
                 implementation("io.github.microutils:kotlin-logging-common:" + extt["kotlin_logging_version"])
                 implementation("org.jetbrains.kotlin:kotlin-stdlib")
@@ -42,7 +43,7 @@ kotlin {
         }
 
         jvm().compilations["test"].defaultSourceSet {//TODO : commonTest instead of jvmtest, wwhen mockk.js will be better at it
-            kotlin.srcDir("src/test/kotlin")
+            kotlin.srcDir("src/test/kotlin")//In order to have only the test run in kotlin we put it here
             dependencies {
 
                 implementation("org.jetbrains.kotlin:kotlin-test-common")
@@ -70,12 +71,6 @@ kotlin {
                 implementation("io.github.microutils:kotlin-logging-js:" + extt["kotlin_logging_version"])
             }
         }
-        metadata().compilations["main"].defaultSourceSet {
-            dependencies {
-                implementation("org.jeasy:easy-rules-api-common:" + extt["rules_version"])
-                implementation("org.jeasy:easy-rules-core-common:" + extt["rules_version"])
-            }
-        }
     }
 
     jvm("jvm") {
@@ -86,6 +81,7 @@ kotlin {
     }
 
     js() {
+        browser()
         mavenPublication {
             artifactId = project.name + "-js"
         }
