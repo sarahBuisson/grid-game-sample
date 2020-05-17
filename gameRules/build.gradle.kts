@@ -71,6 +71,13 @@ kotlin {
                 implementation("io.github.microutils:kotlin-logging-js:" + extt["kotlin_logging_version"])
             }
         }
+        metadata().compilations["main"].defaultSourceSet {
+            dependencies {
+                implementation("org.jeasy:easy-rules-api-common:" + extt["rules_version"])
+                implementation("org.jeasy:easy-rules-core-common:" + extt["rules_version"])
+            }
+
+        }
     }
 
     jvm("jvm") {
