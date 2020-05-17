@@ -17,6 +17,9 @@ class App extends Component {
     }
 
     render() {
+console.log("process.env.PUBLIC_URL")
+console.log(window.location.pathname)
+
         return (<div> myapp
                 <Router>
                     <ul>
@@ -27,18 +30,18 @@ class App extends Component {
                         <li><Link to="./skyscraper">skyscraper</Link></li>
                     </ul>
                     <Switch>
-                        <Route exact path="/"
+                        <Route exact path={`${window.location.pathname}`}
                                render={() => "welcome in the home"}
                         ></Route>
-                        <Route exact path="/home"
+                        <Route exact path={`${window.location.pathname}home`}
                                render={() => "welcome in the home"}
                         ></Route>
 
-                        <Route exact path="/sudoku"
+                        <Route exact path={`${window.location.pathname}sudoku`}
                                render={() => <SudokuApp key={"rr"}/>}
                         ></Route>
 
-                        <Route exact path="/skyscraper"
+                        <Route exact path={`${window.location.pathname}skyscraper`}
                                render={() => <SkyscraperApp/>}
                         ></Route>
                     </Switch>
