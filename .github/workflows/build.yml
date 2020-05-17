@@ -22,14 +22,17 @@ jobs:
           gradle packJsNpmToMaven
       - name: Build front load dep
         run: |
-          npm install --prefix website
+          cd website;
+          yarn install
       - name: Build front
         run: |
-          cat website/node_modules/game/package.json
-          ls website/node_modules/game/node_modules
-          ls website/node_modules/game/node_modules/easy-rules-kotlin-easy-rules-api
+          cat node_modules/game/package.json
+          ls node_modules/game/node_modules
+          echo "API"
+          ls node_modules/game/node_modules/easy-rules-kotlin-easy-rules-api
+          echo "CORE"
           ls website/node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
-          npm run build --prefix website
+          yarn run build
       - name: extract build version
         run: |
           gradle generatePomFileForKotlinMultiplatformPublication
