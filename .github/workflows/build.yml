@@ -26,6 +26,9 @@ jobs:
       - name: Build front
         run: |
           cat website/node_modules/game/package.json
+          ls website/node_modules/game/node_modules
+          ls website/node_modules/game/node_modules/easy-rules-kotlin-easy-rules-api
+          ls website/node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
           npm run build --prefix website
       - name: extract build version
         run: |
