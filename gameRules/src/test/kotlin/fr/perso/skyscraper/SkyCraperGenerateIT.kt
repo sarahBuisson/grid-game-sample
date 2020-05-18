@@ -84,7 +84,7 @@ class SkyCraperGenerateIT {
 
     @Test
     fun generateAndResolveGrid6Perimeter() {
-        val gridSize = 7
+        val gridSize = 6
         val gridGenerated = SkyScraperGrid(gridSize, initPossibleValues(gridSize));
 
         GenerationSkyScraperGrid().run(gridGenerated)
