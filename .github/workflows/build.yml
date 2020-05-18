@@ -22,10 +22,11 @@ jobs:
           gradle packJsNpmToMaven
       - name: Build front load dep
         run: |
-          cd website;
+          cd website
           yarn install
       - name: Build front
         run: |
+          cd website
           cat node_modules/game/package.json
           ls node_modules/game/node_modules
           echo "API"
