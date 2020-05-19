@@ -24,15 +24,10 @@ jobs:
         run: |
           cd website
           yarn install
+          npm dedupe
       - name: Build front
         run: |
           cd website
-          cat node_modules/game/package.json
-          ls node_modules/game/node_modules
-          echo "API"
-          ls node_modules/game/node_modules/easy-rules-kotlin-easy-rules-api
-          echo "CORE"
-          ls website/node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
           yarn run build
       - name: extract build version
         run: |
