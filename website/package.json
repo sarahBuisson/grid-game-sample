@@ -27,7 +27,7 @@
     "css-loader": "^2.1.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "install-jar-dependency": "0.0.8",
+    "install-jar-dependency": "0.0.9",
     "jest": "^24.8.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -65,18 +65,18 @@
     "kotlinx-serialization-kotlinx-serialization-runtime": "org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.20.0"
   },
   "jarDependencies": {
-    "easy-rules-kotlin-easy-rules-core": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-core-npm-3.2.4-snapshot.jar/artifacts/easy-rules-core-npm-3.2.4-snapshot.jar",
-    "easy-rules-kotlin-easy-rules-api": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-api-npm-3.2.4-snapshot.jar/artifacts/easy-rules-api-npm-3.2.4-snapshot.jar",
-    "easy-rules-core": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-core-npm-3.2.4-snapshot.jar/artifacts/easy-rules-core-npm-3.2.4-snapshot.jar",
-    "easy-rules-api": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-api-npm-3.2.4-snapshot.jar/artifacts/easy-rules-api-npm-3.2.4-snapshot.jar",
+    "easy-rules-kotlin-easy-rules-core": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-core-npm-3.2.4-snapshot.jar/artifacts/easy-rules-core-npm-3.2.4-snapshot.jar/download",
+    "easy-rules-kotlin-easy-rules-api": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-api-npm-3.2.4-snapshot.jar/artifacts/easy-rules-api-npm-3.2.4-snapshot.jar/download",
+    "easy-rules-core": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-core-npm-3.2.4-snapshot.jar/artifacts/easy-rules-core-npm-3.2.4-snapshot.jar/download",
+    "easy-rules-api": "https://packagecloud.io/sarahBuisson/snapshot/packages/java/org.jeasy/easy-rules-api-npm-3.2.4-snapshot.jar/artifacts/easy-rules-api-npm-3.2.4-snapshot.jar/download",
     "game": "../gameRules/build/libs/gameRules-npm-0.0.5-SNAPSHOT.jar"
   },
-  "mavenRepositories": [
-    "https://kotlin.bintray.com/kotlinx/",
-    "https://dl.bintray.com/kotlin/kotlinx/",
-    "https://packagecloud.io/sarahBuisson/snapshot/",
-    "https://packagecloud.io/sarahBuisson/snapshot/maven2/",
-    "https://packagecloud.io/sarahBuisson/sarahbuisson/maven2/"
-  ],
+  "installJarConfig": {
+    "additionalMavenRepositories": [
+      "https://kotlin.bintray.com/kotlinx/",
+      "https://packagecloud.io/sarahBuisson/snapshot/maven2/",
+      "https://packagecloud.io/sarahBuisson/sarahbuisson/maven2/"
+    ]
+  },
   "description": ""
 }
