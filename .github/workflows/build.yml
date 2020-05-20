@@ -25,7 +25,7 @@ jobs:
           cd website
           yarn install
       - name: fix undownload dep
-         run: |
+        run: |
           cd website
           mkdir node_modules/game/node_modules/easy-rules-api
           mkdir node_modules/game/node_modules/easy-rules-core
