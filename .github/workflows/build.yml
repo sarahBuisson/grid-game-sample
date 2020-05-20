@@ -24,6 +24,10 @@ jobs:
         run: |
           cd website
           yarn install
+          cp -R node_modules/easy-rules-api/ node_modules/game/node-modules/easy-rules-api
+          cp -R node_modules/easy-rules-core/ node_modules/game/node-modules/easy-rules-core
+          cp -R node_modules/easy-rules-kotlin-easy-rules-core/ node_modules/game/node-modules/easy-rules-kotlin-easy-rules-core
+          cp -R node_modules/easy-rules-kotlin-easy-rules-api/ node_modules/game/node-modules/easy-rules-kotlin-easy-rules-api
       - name: Build front
         run: |
           cd website
