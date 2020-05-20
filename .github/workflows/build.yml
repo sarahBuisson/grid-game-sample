@@ -27,10 +27,6 @@ jobs:
       - name: fix undownload dep
         run: |
           cd website
-          mkdir node_modules/game/node_modules/easy-rules-api
-          mkdir node_modules/game/node_modules/easy-rules-core
-          mkdir node_modules/game/node_modules/easy-rules-kotlin-easy-rules-api
-          mkdir node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
           cp -R node_modules/easy-rules-api/ node_modules/game/node_modules/easy-rules-api
           cp -R node_modules/easy-rules-core/ node_modules/game/node_modules/easy-rules-core
           cp -R node_modules/easy-rules-kotlin-easy-rules-core/ node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
