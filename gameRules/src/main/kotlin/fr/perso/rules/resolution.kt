@@ -2,7 +2,6 @@ package fr.perso.rules
 
 import fr.perso.Grid
 import fr.perso.SCasePossible
-import org.jeasy.rules.api.RulesEngine
 import org.jeasy.rules.api.Rule
 import org.jeasy.rules.api.Rules
 import org.jeasy.rules.core.RulesImpl
@@ -322,13 +321,16 @@ abstract class ResolveGrid<Type,
                     runBook(it, caseRules)
                 }
 
-                grid.groups.forEach { group ->
+                grid.groups.forEach lit@{ group ->
                     runBook(
                             group,
                             groupeRules as Rules<GroupType>
                     )
                     if (!isGridPossibleValid(grid))
+                    {
                         println("ERROR, grid No More valid")
+                        return@lit
+                    }
                 }
                 nbPossible = newNbPossible
                 newNbPossible = grid.sumBy { it.getPossibles().size }
