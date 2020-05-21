@@ -24,14 +24,6 @@ jobs:
         run: |
           cd website
           yarn install
-      - name: fix undownload dep
-        run: |
-          cd website
-          cp -R node_modules/easy-rules-api/ node_modules/game/node_modules/easy-rules-api
-          cp -R node_modules/easy-rules-core/ node_modules/game/node_modules/easy-rules-core
-          cp -R node_modules/easy-rules-kotlin-easy-rules-core node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
-          cp -R node_modules/easy-rules-kotlin-easy-rules-api node_modules/game/node_modules/easy-rules-kotlin-easy-rules-api
-          ls node_modules/game/node_modules/easy-rules-kotlin-easy-rules-core
       - name: Build front
         run: |
           cd website
