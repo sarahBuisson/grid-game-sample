@@ -1,4 +1,6 @@
 import groovy.json.*
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     id("java") //need for the "from"
     id("java-library")
@@ -6,6 +8,8 @@ plugins {
     id("org.jetbrains.kotlin.multiplatform")
 
 }
+
+
 val extt = extra.properties
 kotlin {
     sourceSets {
@@ -76,12 +80,10 @@ kotlin {
                 implementation("org.jeasy:easy-rules-api-common:" + extt["rules_version"])
                 implementation("org.jeasy:easy-rules-core-common:" + extt["rules_version"])
             }
-
         }
     }
 
     jvm("jvm") {
-
         mavenPublication {
             artifactId = project.name + "-jvm"
         }
