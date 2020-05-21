@@ -40,7 +40,7 @@ class SudokuGridResolveTest {
         assertEquals(grid.nbOfFreePossibilite(), grid.size())
     }
 
-    @Test
+    @Test(timeout = 20000)
     fun shouldResove21() {
 
         val content = "01\n00"
@@ -97,7 +97,7 @@ class SudokuGridResolveTest {
         }
     }
 
-    @Test
+    @Test(timeout = 20000)
     fun shouldResolveDifficileLevel() {
 
 
