@@ -30,7 +30,7 @@ class SudokuGridGenerateTest {
 
     @Test(timeout = 40000)
     fun shouldGenerateAndCleanFull33DifficultyVarious() {
-x
+
         var grid = generateFullSudoku(SudokuGrid(3, 3, initPossibleValues(3 * 3)))
         println(grid)
         var gridClean = generateCleanedSudoku(grid, 50)
