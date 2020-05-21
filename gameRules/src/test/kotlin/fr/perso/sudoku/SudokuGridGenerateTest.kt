@@ -28,16 +28,14 @@ class SudokuGridGenerateTest {
         assertTrue(ResolveSudokuGrid<Int>().isGridPossibleValid(grid))
     }
 
-    @Test(timeout = 20000)
+    @Test(timeout = 40000)
     fun shouldGenerateAndCleanFull33DifficultyVarious() {
-
+x
         var grid = generateFullSudoku(SudokuGrid(3, 3, initPossibleValues(3 * 3)))
         println(grid)
         var gridClean = generateCleanedSudoku(grid, 50)
         println(gridClean)
         gridClean = generateCleanedSudoku(gridClean, 20)
-        println(gridClean)
-        gridClean = generateCleanedSudoku(gridClean, 8)
         println(gridClean)
         var resolved = resolveGrid(gridClean)
 

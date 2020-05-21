@@ -58,21 +58,17 @@ class SkyCraperGenerateIT {
 
     @Test
     fun generateAndResolveGrid5() {
-        val gridGenerated = SkyScraperGrid(5, initPossibleValues(5));
+        var gridGenerated: SkyScraperGrid
+        do {
+            gridGenerated = SkyScraperGrid(5, initPossibleValues(5));
+            runBook(gridGenerated, RulesImpl(setOf(GenerationSkyScraperGrid())))
 
-        runBook(gridGenerated, RulesImpl(setOf(GenerationSkyScraperGrid())))
+        } while (gridGenerated.any { it.getValue() == null })
         println(gridGenerated)
         val gridToResolve = SkyScraperGrid(5, initPossibleValues(5));
         gridGenerated.groups.forEachIndexed { index, skyScraperLine ->
-
-
             gridToResolve.groups[index].view = skyScraperLine.view
-
         }
-
-
-
-
         println(gridToResolve)
         val resolver = ResolveSkyScraperGrid()
         resolver.run(gridToResolve)
@@ -85,24 +81,21 @@ class SkyCraperGenerateIT {
     @Test
     fun generateAndResolveGrid6Perimeter() {
         val gridSize = 6
-        val gridGenerated = SkyScraperGrid(gridSize, initPossibleValues(gridSize));
+        var gridGenerated: SkyScraperGrid
+        do {
+            gridGenerated = SkyScraperGrid(gridSize, initPossibleValues(gridSize));
+            runBook(gridGenerated, RulesImpl(setOf(GenerationSkyScraperGrid())))
 
-        GenerationSkyScraperGrid().run(gridGenerated)
+        } while (gridGenerated.any { it.getValue() == null })
         println(gridGenerated)
         val gridToResolve = SkyScraperGrid(gridSize, initPossibleValues(gridSize));
         gridGenerated.groups.forEachIndexed { index, skyScraperLine ->
-
-
             gridToResolve.groups[index].view = skyScraperLine.view
-
         }
 
-
+        //give the perimeter value to decrease difficulty
         gridGenerated.row1.first().forEachIndexed { index, scase ->
-
-
             gridToResolve.row1.first()[index].setValue(scase.getValue())
-
         }
         gridGenerated.row2.last().forEachIndexed { index, scase ->
 
