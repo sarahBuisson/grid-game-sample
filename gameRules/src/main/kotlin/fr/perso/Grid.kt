@@ -107,6 +107,7 @@ abstract class Grid<Type, TCase : SCasePossible<Type>, TGroupe : Iterable<SCaseP
         this.width = width;
         this.height = height;
         this.possibles = possibles;
+        grid = emptyList()//TODO : quickfix to avoid lateinit error in js in githubpage
         var mgrid = mutableListOf<MutableList<TCase>>()
 
 
