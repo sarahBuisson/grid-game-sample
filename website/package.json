@@ -6,6 +6,7 @@
     "start": "npm run startClient",
     "startClient": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "npm run buildClient",
+    "buildDev": "webpack --mode development --config webpack.config.js",
     "buildClient": "webpack --mode production --config webpack.config.js",
     "test": "jest --coverage",
     "postinstall": "npx install-jar-dependency package.json"
